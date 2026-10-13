@@ -46,6 +46,10 @@ def check_pudelek():
             print(f"Błąd: {e}")
         time.sleep(300)
 
+try:
+    requests.post(WEBHOOK_URL, json={"content": "✅ Bot Pudelek wystartował"}, timeout=30)
+except Exception as e:
+    print(f"Błąd startowego webhooka: {e}", flush=True)
 
 threading.Thread(target=check_pudelek, daemon=True).start()
 
