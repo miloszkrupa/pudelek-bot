@@ -6,7 +6,7 @@ from flask import Flask
 import requests
 
 app = Flask(__name__)
-WEBHOOK_URL = os.environ.get("https://discord.com/api/webhooks/1559542475486531706/Ws1G2eNwJ2EdMRjSl741VjKvL_3JJsC1tFGERvWWjHjQtjClSvfZgH1PLRvyyAAo1O6O")
+WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
 last_article_url = None
 
 
